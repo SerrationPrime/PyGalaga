@@ -1,4 +1,10 @@
-from enemyStalker1 import enemyStalker1
+#from enemyStalker1 import enemyStalker1
+from player import playerSprite
+#from enemyInterceptor import enemyInterceptor1
+#from enemyDrone import enemyDrone1
 
 
-enemyStalker1()
+#enemyStalker1()
+playerSprite()
+#enemyInterceptor1()
+#enemyDrone1()
