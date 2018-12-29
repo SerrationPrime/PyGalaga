@@ -7,8 +7,8 @@ from threading import Thread
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QLabel, QApplication, QMainWindow
-from entities import Player, Projectile, Enemy
-from game_enums import Factions
+from PyGalaga.entities import Player, Projectile, Enemy
+from PyGalaga.game_enums import Factions
 
 
 class SimMoveDemo(QMainWindow):
