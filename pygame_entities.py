@@ -34,7 +34,7 @@ class Player(sprite.Sprite):
             if keys[K_LEFT] and self.rect.y > 790:
                 self.rect.y += self.speed
             if keys[K_SPACE] and self.reload <= 0:
-                self.reload = 60/self.fire_rate
+                self.reload = 60/self.fire_ratez
                 return True
             else:
                 self.reload -= 1
