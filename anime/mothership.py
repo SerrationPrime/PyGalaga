@@ -6,14 +6,13 @@ from sprite_strip_anim import SpriteStripAnim
 from explosion.explosionSprite import exp
 
 
-def playerSprite():
-    surface = pygame.display.set_mode((50, 50))
+def mothershipSprite():
+    surface = pygame.display.set_mode((100, 50))
     FPS = 60
     frames = FPS / 18
     strips1 = [
-        SpriteStripAnim('player10000.png', (0, 0, 50, 50), 1, 1, True, frames),
-        SpriteStripAnim('player10001.png', (0, 0, 50, 50), 1, 1, True, frames+120),
-        SpriteStripAnim('player10002.png', (0, 0, 50, 50), 1, 1, True, frames)
+        SpriteStripAnim('enemyMothership1.png', (0, 0, 100, 50), 1, 1, True, frames),
+        SpriteStripAnim('enemyMothership2.png', (0, 0, 100, 50), 4, 1, True, frames)
 
     ]
     black = Color('black')
