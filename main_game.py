@@ -29,16 +29,22 @@ def update_state():
     bground = Background('backgrounds/starfield.png', [0, 0])
     screen.blit(bground.image, bground.rect)
 
-    player1 = Player(1, [40, 40])
+    player1 = Player(1, [40, 600])
 
     display.update()
 
     timekeeper = time.Clock()
+
+    projectiles = sprite.Group()
+
     while True:
         event.pump()
         keys = key.get_pressed()
 
-        player1.update(keys, screen)
+        if player1.update(keys, screen):
+            projectiles.add(Projectile(Factions.Player,0,-10,player1.rect.center))
+
+        projectiles.update(screen)
 
         display.update()
         screen.blit(bground.image, bground.rect)
