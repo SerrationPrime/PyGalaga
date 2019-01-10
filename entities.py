@@ -26,17 +26,19 @@ class Player(sprite.Sprite):
         # Vraca true ako treba da se kreira projektil
     def update(self, keys, screen, *args):
         retval = False
-        if keys[K_LEFT] and self.rect.x > 10:
+
+
+        if keys[K_a] and self.rect.x > 10:
             self.rect.x -= self.speed
-        if keys[K_RIGHT] and self.rect.x < 590:
+        if keys[K_d] and self.rect.right < 590:
             self.rect.x += self.speed
-        if keys[K_UP] and self.rect.y > 10:
+        if keys[K_w] and self.rect.y > 10:
             self.rect.y -= self.speed
-        if keys[K_DOWN] and self.rect.y < 990:
+        if keys[K_s] and self.rect.bottom < 790:
             self.rect.y += self.speed
         if keys[K_SPACE] and self.reload <= 0:
             self.reload = 60/self.fire_rate
-            retval = False
+            retval = True
         else:
             if self.reload > 0:
                 self.reload -= 1
@@ -45,7 +47,7 @@ class Player(sprite.Sprite):
 
 
 class Projectile(sprite.Sprite):
-    def __init__(self, faction, xspeed, yspeed):
+    def __init__(self, faction, xspeed, yspeed, location):
         sprite.Sprite.__init__(self)
         self.faction = faction
 
@@ -54,16 +56,19 @@ class Projectile(sprite.Sprite):
         else:
             self.image = image.load('sprites/m_projectile_plasma1.png').convert_alpha()
 
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+        self.rect.x -= self.rect.width/2
+
         self.xspeed = xspeed
         self.yspeed = yspeed
 
-        # Vraca true ako treba izbrisati projektil
-        def update(self):
-            # Moguci problemi sa negativnim koordinatama?
-            self.rect.x += self.xspeed
-            self.rect.y += self.yspeed
+    def update(self, screen):
+        # Moguci problemi sa negativnim koordinatama?
+        self.rect.x += self.xspeed
+        self.rect.y += self.yspeed
 
-            if self.rect.x <=0 or self.rect.x>=600 or self.rect.y <=0 or self.rect.y >= 1000:
-                return True
-            else:
-                return False
+        screen.blit(self.image, self.rect)
+
+        if self.rect.x <=0 or self.rect.x>=600 or self.rect.y <=0 or self.rect.y >= 800:
+            self.kill()
