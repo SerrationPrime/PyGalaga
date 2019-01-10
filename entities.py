@@ -26,8 +26,6 @@ class Player(sprite.Sprite):
         # Vraca true ako treba da se kreira projektil
     def update(self, keys, screen, *args):
         retval = False
-
-
         if keys[K_a] and self.rect.x > 10:
             self.rect.x -= self.speed
         if keys[K_d] and self.rect.right < 590:
@@ -35,6 +33,7 @@ class Player(sprite.Sprite):
         if keys[K_w] and self.rect.y > 10:
             self.rect.y -= self.speed
         if keys[K_s] and self.rect.bottom < 790:
+
             self.rect.y += self.speed
         if keys[K_SPACE] and self.reload <= 0:
             self.reload = 60/self.fire_rate
@@ -62,6 +61,7 @@ class Projectile(sprite.Sprite):
 
         self.xspeed = xspeed
         self.yspeed = yspeed
+
 
     def update(self, screen):
         # Moguci problemi sa negativnim koordinatama?
