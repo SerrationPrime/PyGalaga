@@ -8,16 +8,15 @@ class Enemy(sprite.Sprite):
         sprite.Sprite.__init__(self)
         self.image = image
         self.rect = self.image.get_rect()
-        self.rect.left = x_coord
+        self.rect.left = 800
         self.formation_x = x_coord
         self.rect.top = y_coord
         self.formation_y = y_coord
 
         self.name = name
-        self.lives = 1
         self.speed = 1
 
-        self.go_back = False
+        self.go_back = True
         self.drifting = False
         self.drifting_speed=10
         self.drifting_barrage=0
@@ -41,22 +40,7 @@ class Enemy(sprite.Sprite):
                 self.drifting = False
                 self.go_back = True
         else:
-            if self.rect.y != self.formation_y:
-                if self.rect.y - self.formation_y<10:
-                    self.rect.y = self.formation_y
-                else:
-                    self.rect.y -= 5
-            else:
-                if self.rect.x != self.formation_x:
-                    distance_to_go = self.formation_x-self.rect.x
-                    if distance_to_go<5 and distance_to_go>-5:
-                        self.rect.x = self.formation_x
-                        go_back = False
-                    else:
-                        if (distance_to_go>0):
-                            self.rect.x +=5
-                        else:
-                            self.rect.x -=5
+            self.move_to_position()
 
         if random.randint(1, 1000)<=5:
             projectiles.add(Projectile(Factions.Enemy, 0, 10, self.rect.center))
@@ -65,8 +49,31 @@ class Enemy(sprite.Sprite):
 
         screen.blit(self.image,self.rect)
 
-        if self.lives<=0:
-            self.kill()
+    def move_to_position(self):
+        if self.rect.y != self.formation_y:
+            distance_to_go = self.formation_y - self.rect.y
+            if -5  < distance_to_go < 5:
+                self.rect.y = self.formation_y
+            else:
+                if distance_to_go > 0:
+                    self.rect.y += 5
+                else:
+                    self.rect.y -= 5
+            if self.rect.y - self.formation_y < 5:
+                self.rect.y = self.formation_y
+            else:
+                self.rect.y -= 5
+        else:
+            if self.rect.x != self.formation_x:
+                distance_to_go = self.formation_x - self.rect.x
+                if -5 < distance_to_go < 5:
+                    self.rect.x = self.formation_x
+                    go_back = False
+                else:
+                    if distance_to_go > 0:
+                        self.rect.x += 5
+                    else:
+                        self.rect.x -= 5
 
 
 class EnemyGroup():
