@@ -1,43 +1,86 @@
-import pygame
+from pygame import *
+from PyGalaga.game_enums import *
+from PyGalaga.entities import *
+from random import Random
 from PyGalaga.enemy_entities import EnemyGroup
+from multiprocessing import Process
 
-pygame.init()
+class Background(sprite.Sprite):
+    def __init__(self, image_file, location):
+        sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = image.load(image_file).convert_alpha()   #vazno je convert_alpha za performanse
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
 
-#ZA SADA SE KRECU JAKO BRZO, PODESICU IH BOLJE, imam neki problem sa satom...
 
-width = 800
-height = 600
-display = pygame.display.set_mode((width, height))
-pygame.display.set_caption('Invaders')
-bg_img = pygame.image.load('backgrounds/sunrise.jpg').convert_alpha()
-clock = pygame.time.Clock()
-display.blit(bg_img, [0,0])
+def initialize_game():
+    p = Process(target=update_state)
+    p.start()
+    p.join()
 
-group = EnemyGroup()
 
-print('{}'.format(len(group.enemy_list)))
-for enemy in group.enemy_list:
-    print('{} ({},{})'.format(enemy.name, enemy.x_coord, enemy.y_coord))
+def update_state():
+    width = 800
+    height = 600
 
-def show_enemies():
-    for i in range(group.rows*group.columns):
-            enemy = group.enemy_list[i]
-            enemy_rect = pygame.Rect(enemy.x_coord, enemy.y_coord, enemy.image_width, enemy.image_height)
-            display.blit(enemy.image, enemy_rect)
-            #enemy.x_coord, enemy.y_coord)
+    init()
+    screen = display.set_mode((width, height))
+    display.flip()
 
-def animation():
-    i = 0
-    while True:
-        display.blit(bg_img, [0, 0])
-        show_enemies()
+    screen.fill([255, 255, 255])
+    bground = Background('backgrounds/sunrise.jpg', [0, 0])
+    screen.blit(bground.image, bground.rect)
+
+    group = EnemyGroup()
+
+    display.update()
+
+    timekeeper = time.Clock()
+
+    projectiles = sprite.Group()
+    done = False
+    while not done:
+        event.pump()
+
+        show_enemies(group, screen)
         group.update()
-        pygame.display.update()
-        clock.tick(5000)
-        if i >10:
-            break
 
-animation()
+        r = Random()
+        index = r.randint(0, group.enemy_list.__len__())
 
-for enemy in group.enemy_list:
-    print('{} ({},{})'.format(enemy.name, enemy.x_coord, enemy.y_coord))
+        projectiles.add(Projectile(Factions.Enemy,0,10,group.enemy_list[3].rect.center))
+        projectiles.update(screen)
+
+        display.update()
+        screen.blit(bground.image, bground.rect)
+
+        for enemy in group.enemy_list:
+            print('[{}, {}]'.format(enemy.row, enemy.column))
+
+        #if group.enemy_list.__len__() == 30:
+         #   group.enemy_list.remove(group.enemy_list[29])
+         #   group.enemy_list.remove(group.enemy_list[19])
+         #   group.enemy_list.remove(group.enemy_list[9])
+
+        timekeeper.tick(60)
+
+        for sevent in event.get():  # User did something
+            if sevent.type == QUIT:  # If user clicked close
+                done = True
+
+        if done:
+            quit()
+
+def show_enemies(group, screen):
+    for i in range(group.enemy_list.__len__()):
+            enemy = group.enemy_list[i]
+            enemy_rect = Rect(enemy.x_coord, enemy.y_coord, enemy.image_width, enemy.image_height)
+            screen.blit(enemy.image, enemy_rect)
+
+
+if __name__ == '__main__':
+    initialize_game()
+
+
+
+

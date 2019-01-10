@@ -45,14 +45,13 @@ class Projectile(sprite.Sprite):
     def __init__(self, faction, xspeed, yspeed):
         sprite.Sprite.__init__(self)
         self.faction = faction
-
+        self.success = self.update()
+        self.xspeed = xspeed
+        self.yspeed = yspeed
         if faction == Factions.Enemy:
             self.image = image.load('sprites/m_projectile_enemy1.png').convert_alpha()
         else:
             self.image = image.load('sprites/m_projectile_plasma1.png').convert_alpha()
-
-        self.xspeed = xspeed
-        self.yspeed = yspeed
 
         # Vraca true ako treba izbrisati projektil
         def update(self):
