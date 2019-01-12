@@ -1,7 +1,6 @@
 from pygame import *
 from game_enums import Factions
 
-
 class Player(sprite.Sprite):
     def __init__(self, play_num, location):
         sprite.Sprite.__init__(self)
