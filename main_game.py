@@ -1,111 +1,112 @@
-import sys
-import styles
-import keyboard
-import time
+from multiprocessing import Process
+from PyGalaga.entities import *
+from PyGalaga.enemy_entities import *
+from PyGalaga.networking.server import Server
+from PyGalaga.networking.server_change_data import ServerChangeData
 
-from threading import Thread
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QLabel, QApplication, QMainWindow
-from PyGalaga.entities import Player, Projectile, Enemy
-from PyGalaga.game_enums import Factions
+class Background(sprite.Sprite):
+    def __init__(self, image_file, location):
+        sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = image.load(image_file).convert_alpha()   #vazno je convert_alpha za performanse
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
 
+def get_nb_players():
+    return 1
 
-class SimMoveDemo(QMainWindow):
-
+class GameController():
     def __init__(self):
-        super().__init__()
+        self.nb_players = get_nb_players() # za pocetak
+        self.players = []
+        self.keys = []
+        self.player_projectiles = sprite.Group()
+        self.enemy_projectiles = sprite.Group()
+        self.formation1 = EnemyGroup()
+        self.screen = display.set_mode((600, 800))
+        self.enemy_coordinates = []
+        self.projectiles_coordinates = []
+        self.player_projectile_coordinates = []
+        self.player_coordinates = []
+        self.player_lives = []
 
-        self.pix1 = QPixmap('sprites/m_play_char.png')
-        self.player1 = Player(QLabel(self))
+    def collect_changes(self):
+        changes = ServerChangeData(self.enemy_coordinates, self.projectiles_coordinates, self.player_projectile_coordinates, self.player_coordinates, self.player_lives)
+        return changes
 
-        self.xlimit = 600
-        self.ylimit = 1000
+    def initialize_players(self):
+        for i in range(get_nb_players()):
+            player = Player(i+1, [40+i*50, 600])
+            self.players.append(player)
 
-        self.projectiles = []
 
-        self.setFixedSize(self.xlimit, self.ylimit)
-        self.level = 1
+    # u sustini cu ga videti samo kada ga player pozove, tako da ce samo na njegov display uticati,
+    # dok ce sam server ostati nepromenjen (simulira se po planu)
+    def apply_changes(self, command):
+        self.enemy_coordinates = command.enemy_coordinates
+        self.projectiles_coordinates = command.projectile_coordinates
+        self.player_projectile_coordinates = command.player_projectile_coordinates
+        self.player_coordinates = command.player_coordinates
+        self.player_lives = command.player_lives
 
-        self.__init_ui__()
+    def update_player(self, keys):
+        self.keys.append(keys)
 
-        self.updateThread = Thread(target=self.__update_state__, daemon=True)
-        self.updateThread.start()
+    def update_state(self):
+        self.initialize_players()
+        init()
+        display.flip()
 
-    def __init_ui__(self):
+        self.screen.fill([255, 255, 255])
+        bground = Background('backgrounds/starfield.png', [0, 0])
+        self.screen.blit(bground.image, bground.rect)
 
-        self.player1.label.setPixmap(self.pix1)
-        self.player1.label.setGeometry(100, 850, 50, 50)
-        self.player1.label.setAlignment(Qt.AlignCenter)
+        display.update()
+        timekeeper = time.Clock()
+        done = False
+        while not done:
+            event.pump()
+            # ovo treba da ostane zbog servera
+            for i in range(len(self.players)):
+                keys = list(self.keys[i])
+                if self.players[i].update(keys, self.screen):
+                    self.player_projectiles.add(Projectile(Factions.Player, 0, -10, self.players[i].rect.center))
+                self.formation1.update(self.screen, self.enemy_projectiles)
 
-        self.setStyleSheet(styles.stylesheet)
+                sprite.groupcollide(self.player_projectiles, self.formation1.enemies, True, True)
+                if sprite.spritecollideany(self.players[i], self.enemy_projectiles) is not None:
+                    self.players[i].lives -= 1
+                    sprite.spritecollideany(self.players[i], self.enemy_projectiles).kill()
+                    if self.players[i].lives <= 0:
+                        exit()
 
-        self.level_display = QLabel(self)
-        self.level_display.setText("Level %d" % self.level)
-        self.level_display.setGeometry(self.xlimit/2-75 ,0, 150, 50)
-        self.level_display.setStyleSheet(styles.stylesheet)
-        self.level_display.setAlignment(Qt.AlignCenter)
+            self.keys.remove(keys[:])
 
-        self.p1score_display = QLabel(self)
-        self.p1score_display.setText("Score: %d" % self.player1.score)
-        self.p1score_display.setGeometry(20, 0, 200, 50)
-        self.p1score_display.setStyleSheet(styles.stylesheet)
-        self.p1score_display.setAlignment(Qt.AlignLeft)
+            self.player_projectiles.update(self.screen)
+            self.enemy_projectiles.update(self.screen)
 
-        self.setWindowTitle('Really crappy Galaga')
-        self.show()
+            display.update()
+            self.screen.blit(bground.image, bground.rect)
 
-    def __update_state__(self):
-        while True:
-            rec1 = self.player1.label.geometry()
+            for event_ in event.get():  # User did something
+                if event_.type == QUIT:  # If user clicked close
+                    done = True
 
-            if keyboard.is_pressed('d'):
-                if (rec1.x() + 5 + rec1.width()) <= self.xlimit:
-                    self.player1.label.setGeometry(rec1.x() + 5, rec1.y(), rec1.width(), rec1.height())
-                    rec1 = self.player1.label.geometry()
-            if keyboard.is_pressed('s'):
-                if (rec1.y() + 5 + rec1.height()) <= self.ylimit:
-                    self.player1.label.setGeometry(rec1.x(), rec1.y() + 5, rec1.width(), rec1.height())
-                    rec1 = self.player1.label.geometry()
-            if keyboard.is_pressed('w'):
-                if (rec1.y() - 5) >= 0:
-                    self.player1.label.setGeometry(rec1.x(), rec1.y() - 5, rec1.width(), rec1.height())
-                    rec1 = self.player1.label.geometry()
-            if keyboard.is_pressed('a'):
-                if (rec1.x() - 5) >= 0:
-                    self.player1.label.setGeometry(rec1.x() - 5, rec1.y(), rec1.width(), rec1.height())
+            if done:
+                quit()
 
-            self.__update_projectiles()
-            time.sleep(1 / 60)
+            timekeeper.tick(60)
+    #add logic from main game
 
-    def __create_projectile(self, player):
-        lab = QLabel(self)
-        pix = QPixmap('sprites/m_projectile_plasma1.png')
-        lab.setPixmap(pix)
-        lab.setGeometry(player.label.geometry().center().x()-5, player.label.geometry().top(), 12, 25)
-        lab.setAlignment(Qt.AlignCenter)
+    def initialize_game(self):
+        # initialize server
+        server = Server('192.168.100.196', 5555, self.nb_players)
+        server.start_server()
 
-        lab.show()
-        proj = Projectile(lab, Factions.Player, 0, -20)
-        return proj
-
-    def __update_projectiles(self):
-        if keyboard.is_pressed('space') and self.player1.reload == 0:
-            self.projectiles.append(self.__create_projectile(self.player1))
-            self.player1.reload=60/self.player1.fire_rate
-        else:
-            if self.player1.reload > 0:
-                self.player1.reload -= 1
-
-        for proj in self.projectiles:
-            curr_pos = proj.label.geometry()
-            proj.label.setGeometry(curr_pos.x() + proj.xspeed, curr_pos.y() + proj.yspeed, curr_pos.width(), curr_pos.height())
-            if curr_pos.x()>self.xlimit or curr_pos.x()<0 or curr_pos.y()>self.ylimit or curr_pos.y()<0:
-                self.projectiles.remove(proj)
-                del proj
+        p = Process(target=self.update_state())
+        p.start()
+        p.join()
 
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = SimMoveDemo()
-    sys.exit(app.exec_())
+    gc = GameController()
+    gc.initialize_game()

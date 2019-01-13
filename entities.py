@@ -1,5 +1,5 @@
 from pygame import *
-from game_enums import Factions
+from .game_enums import Factions
 
 
 class Player(sprite.Sprite):
@@ -32,7 +32,8 @@ class Player(sprite.Sprite):
             self.rect.x += self.speed
         if keys[K_w] and self.rect.y > 10:
             self.rect.y -= self.speed
-        if keys[K_s] and self.rect.bottom < 990:
+        if keys[K_s] and self.rect.bottom < 790:
+
             self.rect.y += self.speed
         if keys[K_SPACE] and self.reload <= 0:
             self.reload = 60/self.fire_rate
@@ -61,7 +62,7 @@ class Projectile(sprite.Sprite):
         self.xspeed = xspeed
         self.yspeed = yspeed
 
-        # Vraca true ako treba izbrisati projektil
+
     def update(self, screen):
         # Moguci problemi sa negativnim koordinatama?
         self.rect.x += self.xspeed
@@ -69,5 +70,5 @@ class Projectile(sprite.Sprite):
 
         screen.blit(self.image, self.rect)
 
-        if self.rect.x <=0 or self.rect.x>=600 or self.rect.y <=0 or self.rect.y >= 1000:
+        if self.rect.x <=0 or self.rect.x>=600 or self.rect.y <=0 or self.rect.y >= 800:
             self.kill()
