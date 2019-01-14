@@ -21,6 +21,8 @@ class Player(sprite.Sprite):
         self.speed = 5
         self.fire_rate = 5
         self.reload = 0
+        self.invuln_timer = 0
+        self.invuln_len = 120
 
         # Vraca true ako treba da se kreira projektil
     def update(self, keys, screen, *args):
@@ -40,6 +42,23 @@ class Player(sprite.Sprite):
         else:
             if self.reload > 0:
                 self.reload -= 1
+
+        if self.invuln_timer>0:
+            self.invuln_timer-=1
+            if self.invuln_timer == self.invuln_len-1:
+                self.image = image.load('sprites/m_play_charinvul.png').convert_alpha()
+            elif self.invuln_timer == 20:
+                self.image = image.load('sprites/m_play_char.png').convert_alpha()
+            elif self.invuln_timer == 15:
+                self.image = image.load('sprites/m_play_charinvul.png').convert_alpha()
+            elif self.invuln_timer == 10:
+                self.image = image.load('sprites/m_play_char.png').convert_alpha()
+            elif self.invuln_timer == 5:
+                self.image = image.load('sprites/m_play_charinvul.png').convert_alpha()
+            elif self.invuln_timer == 0:
+                self.image = image.load('sprites/m_play_char.png').convert_alpha()
+
+
         screen.blit(self.image, self.rect)
         return retval
 
