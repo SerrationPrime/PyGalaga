@@ -37,7 +37,7 @@ def update_state():
     myfont = font.SysFont("Miriad Pro Regular", 36)
 
     player1 = Player(1, [40, 600])
-    label = myfont.render("Score: %s" % (player1.score), 1, (255, 255, 0))
+    label = myfont.render("Score: %s" % player1.score, 1, (255, 255, 0))
     screen.blit(label, (420, 750))
     label2 = myfont.render("Lives: %s" % player1.lives, 1, (255, 255, 0))
     screen.blit(label2, (50, 750))
@@ -61,8 +61,10 @@ def update_state():
             player1.invuln_timer = player1.invuln_len
             sprite.spritecollideany(player1, enemy_projectiles).kill()
             if player1.lives <= 0:
-                label = myfont.render("GAME OVER", 1, (255, 255, 0))
-                screen.blit(label, (230, 400))
+                label1 = myfont.render("GAME OVER", 1, (255, 255, 0))
+                label2 = myfont.render("SCORE: %s" % player1.score, 1, (255, 255, 0))
+                screen.blit(label1, (230, 400))
+                screen.blit(label2, (230, 450))
                 display.update()
                 time.wait(2000)
                 exit()
