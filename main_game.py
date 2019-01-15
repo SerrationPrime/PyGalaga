@@ -1,111 +1,153 @@
-import sys
-import styles
-import keyboard
-import time
-
-from threading import Thread
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QLabel, QApplication, QMainWindow
-from entities import Player, Projectile, Enemy
-from game_enums import Factions
+from entities import *
+from pygame import *
+from enemy_entities import *
 
 
-class SimMoveDemo(QMainWindow):
+class Background(sprite.Sprite):
+    def __init__(self, image_file, location):
+        sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = image.load(image_file).convert_alpha()   #vazno je convert_alpha za performanse
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
 
-    def __init__(self):
-        super().__init__()
 
-        self.pix1 = QPixmap('sprites/m_play_char.png')
-        self.player1 = Player(QLabel(self))
+def initialize_game(multiplayer):
+    update_state(multiplayer)
 
-        self.xlimit = 600
-        self.ylimit = 1000
 
-        self.projectiles = []
+def update_state(multi):
+    width = 600
+    height = 800
+    level = 1
+    in_level = True
+    level_delay = 180
+    level_timer = 0
 
-        self.setFixedSize(self.xlimit, self.ylimit)
-        self.level = 1
+    multiplayer = multi
 
-        self.__init_ui__()
+    init()
+    screen = display.set_mode((width, height))
+    display.flip()
 
-        self.updateThread = Thread(target=self.__update_state__, daemon=True)
-        self.updateThread.start()
+    screen.fill([255, 255, 255])
+    bground = Background('backgrounds/starfield.png', [0, 0])
+    screen.blit(bground.image, bground.rect)
 
-    def __init_ui__(self):
+    myfont = font.SysFont("Miriad Pro Regular", 36)
 
-        self.player1.label.setPixmap(self.pix1)
-        self.player1.label.setGeometry(100, 850, 50, 50)
-        self.player1.label.setAlignment(Qt.AlignCenter)
+    player1 = Player(1, [40, 600])
 
-        self.setStyleSheet(styles.stylesheet)
+    if multiplayer:
+        player2 = Player(2, [560, 600])
 
-        self.level_display = QLabel(self)
-        self.level_display.setText("Level %d" % self.level)
-        self.level_display.setGeometry(self.xlimit/2-75 ,0, 150, 50)
-        self.level_display.setStyleSheet(styles.stylesheet)
-        self.level_display.setAlignment(Qt.AlignCenter)
+    display.update()
 
-        self.p1score_display = QLabel(self)
-        self.p1score_display.setText("Score: %d" % self.player1.score)
-        self.p1score_display.setGeometry(20, 0, 200, 50)
-        self.p1score_display.setStyleSheet(styles.stylesheet)
-        self.p1score_display.setAlignment(Qt.AlignLeft)
+    timekeeper = time.Clock()
 
-        self.setWindowTitle('Really crappy Galaga')
-        self.show()
+    player_projectiles = sprite.Group()
+    if multiplayer:
+        player2_projectiles = sprite.Group()
+    enemy_projectiles = sprite.Group()
+    formation1 = EnemyGroup(4+level)
 
-    def __update_state__(self):
-        while True:
-            rec1 = self.player1.label.geometry()
+    game_active = True
 
-            if keyboard.is_pressed('d'):
-                if (rec1.x() + 5 + rec1.width()) <= self.xlimit:
-                    self.player1.label.setGeometry(rec1.x() + 5, rec1.y(), rec1.width(), rec1.height())
-                    rec1 = self.player1.label.geometry()
-            if keyboard.is_pressed('s'):
-                if (rec1.y() + 5 + rec1.height()) <= self.ylimit:
-                    self.player1.label.setGeometry(rec1.x(), rec1.y() + 5, rec1.width(), rec1.height())
-                    rec1 = self.player1.label.geometry()
-            if keyboard.is_pressed('w'):
-                if (rec1.y() - 5) >= 0:
-                    self.player1.label.setGeometry(rec1.x(), rec1.y() - 5, rec1.width(), rec1.height())
-                    rec1 = self.player1.label.geometry()
-            if keyboard.is_pressed('a'):
-                if (rec1.x() - 5) >= 0:
-                    self.player1.label.setGeometry(rec1.x() - 5, rec1.y(), rec1.width(), rec1.height())
 
-            self.__update_projectiles()
-            time.sleep(1 / 60)
+    #Problem sa multiprocesingom aplikacije: PyGame je usko vezan sa Display objektom, koji vise procesa ne mogu da dele
+    #Stoga, multiprocesing nije bio validna opcija bez znacajne refaktorizacije koda koji bi narusavao nacin rada
+    #predvidjen bibliotekom. Multithreading ima manje takvih problema, ali zahteva upotrebu globalnih objekata i opet
+    #ne utice znacajno na performance (verovatno zbog GIL?).
+    while game_active:
+        event.pump()
 
-    def __create_projectile(self, player):
-        lab = QLabel(self)
-        pix = QPixmap('sprites/m_projectile_plasma1.png')
-        lab.setPixmap(pix)
-        lab.setGeometry(player.label.geometry().center().x()-5, player.label.geometry().top(), 12, 25)
-        lab.setAlignment(Qt.AlignCenter)
+        keys = key.get_pressed()
 
-        lab.show()
-        proj = Projectile(lab, Factions.Player, 0, -20)
-        return proj
+        if sprite.spritecollideany(player1, enemy_projectiles)is not None and player1.invuln_timer == 0:
+            player1.lives -= 1
+            player1.invuln_timer = player1.invuln_len
+            sprite.spritecollideany(player1, enemy_projectiles).kill()
+            if player1.lives <= 0:
+                player1.alive = False
+            if player1.lives <= 0:
+                if (multiplayer and player2.lives <= 0) or (not multiplayer):
+                    label = myfont.render("GAME OVER", 1, (255, 255, 0))
+                    screen.blit(label, (230, 400))
+                    game_active = False
 
-    def __update_projectiles(self):
-        if keyboard.is_pressed('space') and self.player1.reload == 0:
-            self.projectiles.append(self.__create_projectile(self.player1))
-            self.player1.reload=60/self.player1.fire_rate
-        else:
-            if self.player1.reload > 0:
-                self.player1.reload -= 1
+        if multiplayer:
+            if sprite.spritecollideany(player2, enemy_projectiles)is not None and player2.invuln_timer == 0:
+                player2.lives -= 1
+                player2.invuln_timer = player2.invuln_len
+                sprite.spritecollideany(player2, enemy_projectiles).kill()
+                if player2.lives <= 0:
+                    player2.alive = False
+                if player1.lives <= 0 and player2.lives <= 0:
+                    label = myfont.render("GAME OVER", 1, (255, 255, 0))
+                    screen.blit(label, (230, 400))
+                    game_active = False
 
-        for proj in self.projectiles:
-            curr_pos = proj.label.geometry()
-            proj.label.setGeometry(curr_pos.x() + proj.xspeed, curr_pos.y() + proj.yspeed, curr_pos.width(), curr_pos.height())
-            if curr_pos.x()>self.xlimit or curr_pos.x()<0 or curr_pos.y()>self.ylimit or curr_pos.y()<0:
-                self.projectiles.remove(proj)
-                del proj
+        if len(sprite.groupcollide(formation1.special_enemies, player_projectiles, True, True)) > 0:
+            player1.score += 100
+        if multiplayer:
+            if len(sprite.groupcollide(formation1.special_enemies, player2_projectiles, True, True)) > 0:
+                player2.score += 100
 
+        play1_kills = len(sprite.groupcollide(formation1.enemies, player_projectiles, True, True))
+        player1.score += play1_kills * 10
+        formation1.enemy_count -= play1_kills
+        if multiplayer:
+            play2_kills = len(sprite.groupcollide(formation1.enemies, player2_projectiles, True, True))
+            player2.score += play2_kills * 10
+            formation1.enemy_count -= play2_kills
+        if formation1.enemy_count <= 0 and in_level:
+            in_level = False
+            player1.lives = 3
+            player1.alive = True
+            if multiplayer:
+                player2.lives = 3
+                player2.alive = True
+            level_timer = level_delay
+        elif not in_level:
+            level_timer -= 1
+            if level_timer == 0:
+                formation1.aggro_factor += 1
+                formation1.get_enemies()
+                level += 1
+                in_level = True
+
+        if player1.alive:
+            if player1.update(keys, screen):
+                player_projectiles.add(Projectile(Factions.Player, 0, -10, player1.rect.center))
+        if multiplayer and player2.alive:
+            if player2.update(keys, screen):
+                player2_projectiles.add(Projectile(Factions.Player, 0, -10, player2.rect.center))
+        formation1.update(screen, enemy_projectiles)
+
+        player_projectiles.update(screen)
+        enemy_projectiles.update(screen)
+
+        label = myfont.render("Score: %s" % (player1.score), 1, (255, 255, 0))
+        label2 = myfont.render("Lives: %s" % (player1.lives), 1, (255, 255, 0))
+        label3 = myfont.render("Level: %s" % level, 1, (255, 255, 0))
+        if multiplayer:
+            player2_projectiles.update(screen)
+            labelp = myfont.render("Score: %s" % (player2.score), 1, (255, 255, 0))
+            label2p = myfont.render("Lives: %s" % (player2.lives), 1, (255, 255, 0))
+
+        screen.blit(label, (420, 700))
+        screen.blit(label2, (50, 700))
+        screen.blit(label3, (240, 700))
+        if multiplayer:
+            screen.blit(labelp, (420, 750))
+            screen.blit(label2p, (50, 750))
+        display.update()
+        screen.blit(bground.image, bground.rect)
+
+        if not game_active:
+            time.wait(2000)
+            quit()
+
+        timekeeper.tick(60)
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = SimMoveDemo()
-    sys.exit(app.exec_())
+    initialize_game(False)

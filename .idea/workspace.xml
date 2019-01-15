@@ -1,98 +1,530 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0d6ac7d-8e69-4026-afb2-d62c3cdfca25" name="Default" comment="" />
+    <list default="true" id="2192e0c3-797e-419c-a3c5-3fec9808ae0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QtMove.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Space_Invaders-master.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/.idea/anime.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/Exp0009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy1/enemyStalker1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy1/images/enemy10001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy1/images/enemy10002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy1/images/enemy10003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy10001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy10002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy10003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy2/enemyInterceptor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy2/images/enemy20000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy2/images/enemy20001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy2/images/enemy20002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy3/enemyDrone.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy3/images/enemy30001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy3/images/enemy30002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemy3/images/enemy30003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemyMothership1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemyMothership2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/enemyStalker1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/explosionSprite.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosion/images/Exp0009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/explosionSprite.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/m_cruiser_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/mothership.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/player.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/player/images/player10000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/player/images/player10001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/player/images/player10002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/player/player.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/player10000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/player10001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/player10002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/runEnemy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/sprite.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime/sprite_strip_anim.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.idea/QtMove.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.idea/bc.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.idea/QtMove.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/backgrounds/starfield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/connectGame_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/connect_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/enemy_entities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/entities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/game_enums.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/host_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/host_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/image_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/main_background.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/main_game.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/main_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/main_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu/.idea/menu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu/connect_menu/connect_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu_connect_to_game.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu_host_game.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu_host_tournament.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu_join_tournament.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu_multiplayer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu_tournament.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/menu_tournament2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/multiplayer_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/multiplayer_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_cruiser_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_drone_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_interceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_interceptor_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_mothership_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_play_char.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_play_char2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_play_charinvul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_projectile_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_projectile_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_projectile_enemy3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_projectile_plasma1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_projectile_rocket1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_stalker_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/sprites/m_warning_heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/styles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/tournament_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/PyGalaga2/tournament_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/backgrounds/starfield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/connectGame_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/connect_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/connect_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/enemy_entities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/entities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/game_enums.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/host_game_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/host_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/host_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/image_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/main_background.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/main_game.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/main_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/main_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/menu/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/menu/.idea/menu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/menu/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/menu/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/menu/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/menu/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/menu/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/menu/connect_menu/connect_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/multiplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/multiplayer_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/multiplayer_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/newmultiplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/singleplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_cruiser_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_drone_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_interceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_interceptor_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_mothership_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_play_char.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_play_char2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_play_charinvul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_projectile_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_projectile_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_projectile_enemy3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_projectile_plasma1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_projectile_rocket1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_stalker_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/sprites/m_warning_heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/styles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/tournament_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/tournament_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/bc/tournament_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/connect_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/host_game_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/main_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/multiplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/newmultiplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/singleplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background/tournament_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/.idea/bc.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.idea/QtMove.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/backgrounds/starfield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/connectGame_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/connect_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/enemy_entities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/entities.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/game_enums.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/host_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/host_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/image_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/main_background.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/main_game.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/main_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/main_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu/.idea/menu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu/connect_menu/connect_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu_connect_to_game.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu_host_game.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu_host_tournament.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu_join_tournament.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu_multiplayer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu_tournament.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/menu_tournament2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/multiplayer_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/multiplayer_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_cruiser_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_drone_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_interceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_interceptor_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_mothership_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_play_char.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_play_char2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_play_char2invul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_play_charinvul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_projectile_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_projectile_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_projectile_enemy3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_projectile_plasma1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_projectile_rocket1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_stalker_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/sprites/m_warning_heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/styles.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/tournament_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bc/PyGalaga2/tournament_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_enums.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_enums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon2.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/.idea/menu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu/connect_menu/connect_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/.idea/bc.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/connectGame_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/connect_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/connect_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/host_game_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/host_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/host_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/image_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/main_background.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/main_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/main_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/multiplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/multiplayer_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/multiplayer_menu_btnfunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/bc/singleplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/connect_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/host_game_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/main_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/multiplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/menus/singleplayer_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_enemy1/a_m_cruiser_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_enemy1/a_m_cruiser_enemy12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_enemy1/a_m_cruiser_enemy13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_enemy1/m_cruiser_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_enemy1/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_enemy2/a_m_inteceptor_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_enemy2/m_inteceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_enemy2/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_explosion/exlpo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_explosion/expotrans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_explosion/expotrans2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_explosion/expotrans3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_explosion/m_explosion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_explosion/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_player/a_m_play_char.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_player/m_play_char.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/a_player/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_enemy1/a_m_cruiser_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_enemy1/a_m_cruiser_enemy12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_enemy1/a_m_cruiser_enemy13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_enemy1/m_cruiser_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_enemy1/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_enemy2/a_m_inteceptor_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_enemy2/m_inteceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_enemy2/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_explosion/exlpo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_explosion/expotrans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_explosion/expotrans2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_explosion/expotrans3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_explosion/m_explosion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_explosion/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_player/a_m_play_char.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_player/m_play_char.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/animted/a_player/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/m_explosion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/m_explosion_big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/m_inteceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/m_inteceptor_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/m_projectile_rocket1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/m_stalker_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/m_stalker_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/Activate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/activate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/deactivate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/easy_install-3.7-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/easy_install-3.7.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/easy_install-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/easy_install.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/pip-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/pip.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/pip3-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/pip3.7-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/pip3.7.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/pip3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/python.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/Scripts/pythonw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites/pyinter/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_enemy1/a_m_cruiser_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_enemy1/a_m_cruiser_enemy12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_enemy1/a_m_cruiser_enemy13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_enemy1/m_cruiser_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_enemy1/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_enemy2/a_m_inteceptor_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_enemy2/m_inteceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_enemy2/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_explosion/exlpo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_explosion/expotrans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_explosion/expotrans2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_explosion/expotrans3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_explosion/m_explosion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_explosion/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_player/a_m_play_char.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_player/m_play_char.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/a_player/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_enemy1/a_m_cruiser_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_enemy1/a_m_cruiser_enemy12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_enemy1/a_m_cruiser_enemy13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_enemy1/m_cruiser_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_enemy1/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_enemy2/a_m_inteceptor_enemy1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_enemy2/m_inteceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_enemy2/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_explosion/exlpo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_explosion/expotrans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_explosion/expotrans2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_explosion/expotrans3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_explosion/m_explosion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_explosion/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_player/a_m_play_char.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_player/m_play_char.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/animted/a_player/palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_cruiser_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_drone_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_explosion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_explosion_big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_inteceptor_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_inteceptor_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_play_char.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_play_char2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_projectile_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_projectile_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_projectile_enemy3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_projectile_plasma1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_projectile_rocket1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_stalker_enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/m_stalker_enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/Activate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/activate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/deactivate.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/easy_install-3.7-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/easy_install-3.7.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/easy_install-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/easy_install.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/pip-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/pip.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/pip3-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/pip3.7-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/pip3.7.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/pip3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/python.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/Scripts/pythonw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sprites2/pyinter/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.py" beforeDir="false" afterPath="$PROJECT_DIR$/styles.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PyGalaga" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main_game.py">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1321">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="226">
+              <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="17" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/main_menu.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entities.py">
+        <entry file="file://$PROJECT_DIR$/main_game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="209">
+              <caret line="55" column="76" selection-start-line="55" selection-start-column="76" selection-end-line="55" selection-end-column="76" />
+              <folding>
+                <element signature="e#1#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game_enums.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entities.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="1938">
+              <caret line="114" column="45" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles.py">
+        <entry file="file://$PROJECT_DIR$/main_menu_btnfunc.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitattributes">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/enemy_entities.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state>
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>key_listener</find>
-      <find>event.key()</find>
-      <find>self.key_notifier.</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>key_notifier</replace>
-      <replace>key</replace>
-      <replace>self.</replace>
-    </replaceStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/move.py" />
-        <option value="$PROJECT_DIR$/key_listener.py" />
-        <option value="$PROJECT_DIR$/move_demo.py" />
-        <option value="$PROJECT_DIR$/players.py" />
-        <option value="$PROJECT_DIR$/styles.py" />
-        <option value="$PROJECT_DIR$/sim_move_demo.py" />
-        <option value="$PROJECT_DIR$/sprites/game_enums.py" />
-        <option value="$PROJECT_DIR$/game_enums.py" />
+        <option value="$PROJECT_DIR$/multiplayer_menu_btnfunc.py" />
+        <option value="$PROJECT_DIR$/multiplayer_menu.py" />
+        <option value="$PROJECT_DIR$/main_menu_btnfunc.py" />
+        <option value="$PROJECT_DIR$/tournament_menu.py" />
+        <option value="$PROJECT_DIR$/image_loader.py" />
+        <option value="$PROJECT_DIR$/host_menu_btnfunc.py" />
+        <option value="$PROJECT_DIR$/main_menu.py" />
         <option value="$PROJECT_DIR$/entities.py" />
-        <option value="$PROJECT_DIR$/key_notifier.py" />
         <option value="$PROJECT_DIR$/main_game.py" />
+        <option value="$PROJECT_DIR$/enemy_entities.py" />
       </list>
     </option>
   </component>
@@ -107,33 +539,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="QtMove" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QtMove" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QtMove" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QtMove" type="462c0819:PsiDirectoryNode" />
-              <item name="sprites" type="462c0819:PsiDirectoryNode" />
+              <item name="PyGalaga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PyGalaga" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -149,7 +567,7 @@
   </component>
   <component name="RunManager" selected="Python.main_game">
     <configuration name="main_game" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="QtMove" />
+      <module name="PyGalaga" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -169,8 +587,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="move_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="QtMove" />
+    <configuration name="main_menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PyGalaga" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -181,7 +599,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/move_demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_menu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,170 +608,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="players" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="QtMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/players.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sim_move_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="QtMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sim_move_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="styles" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="QtMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/styles.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="PyMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="PyMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <module name="PyMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Twisted Trial">
-      <module name="PyMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="PyMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <module name="PyMove" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.sim_move_demo" />
-      <item itemvalue="Python.move_demo" />
-      <item itemvalue="Python.styles" />
-      <item itemvalue="Python.players" />
-      <item itemvalue="Python.main_game" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main_game" />
-        <item itemvalue="Python.sim_move_demo" />
-        <item itemvalue="Python.styles" />
-        <item itemvalue="Python.players" />
-        <item itemvalue="Python.move_demo" />
+        <item itemvalue="Python.main_menu" />
       </list>
     </recent_temporary>
   </component>
@@ -362,11 +620,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c0d6ac7d-8e69-4026-afb2-d62c3cdfca25" name="Default" comment="" />
-      <created>1544615168767</created>
+      <changelist id="2192e0c3-797e-419c-a3c5-3fec9808ae0b" name="Default Changelist" comment="" />
+      <created>1547544687153</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1544615168767</updated>
+      <updated>1547544687153</updated>
     </task>
     <servers />
   </component>
@@ -374,116 +632,148 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" sideWeight="0.502439" side_tool="true" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49925596" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4955357" weight="0.32569557" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4955357" weight="0.39934534" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074404" side_tool="true" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" />
-      <window_info anchor="right" id="R Packages" order="4" />
-      <window_info anchor="right" id="R Graphics" order="5" />
     </layout>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main_game.py</url>
-          <line>103</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main_game.py</url>
-          <line>87</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="sanChk" language="Python" />
-        <watch expression="sanChk2" language="Python" />
+        <watch expression="label_list" />
       </configuration>
     </watches-manager>
   </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>sanChk2</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>sanChk</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1224112183/PyQt5/QtCore/Qt.py" />
-    <entry file="file://$PROJECT_DIR$/key_listener.py" />
-    <entry file="file://$PROJECT_DIR$/move_demo.py" />
-    <entry file="file://$PROJECT_DIR$/backgrounds/background.png" />
-    <entry file="file://$PROJECT_DIR$/players.py" />
-    <entry file="file://$PROJECT_DIR$/sim_move_demo.py" />
-    <entry file="file://$PROJECT_DIR$/sprites/game_enums.py" />
-    <entry file="file://$PROJECT_DIR$/key_notifier.py">
+    <entry file="file://$PROJECT_DIR$/connectGame_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="28" />
+        <state>
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game_enums.py">
+    <entry file="file://$PROJECT_DIR$/multiplayer_menu_btnfunc.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multiplayer_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles.py">
+    <entry file="file://$PROJECT_DIR$/tournament_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="-1188" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/host_menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entities.py">
+    <entry file="file://$PROJECT_DIR$/host_menu_btnfunc.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu/common.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu/connect_menu/connect_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+    <entry file="file://$PROJECT_DIR$/menu/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu/.idea/menu.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_menu_btnfunc.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="226">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1321">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="209">
+          <caret line="55" column="76" selection-start-line="55" selection-start-column="76" selection-end-line="55" selection-end-column="76" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#1#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_menu.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_enums.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="114" column="45" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enemy_entities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
